@@ -8,7 +8,7 @@
  * Author:            Vasilis Koutsopoulos
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       fg-guitars
+ * Text Domain:       fg-features
  * Domain Path:       /languages
  */
 
@@ -21,5 +21,10 @@ define( 'FG_FEATURES_PLUGIN_DIR_NAME', basename( FG_FEATURES_PLUGIN_DIR_PATH ) )
 define( 'FG_FEATURES_PLUGIN_URL', plugins_url( FG_FEATURES_PLUGIN_DIR_NAME ) );
 
 include 'vendor/autoload.php';
+include 'includes/class-fg-features.php';
+include 'includes/class-fg-features-post-type.php';
 
+include 'includes/features-post-type-fields/abstract-class-fg-features-post-type-fields.php';
+
+FG_Features::getInstance()->init();
 
