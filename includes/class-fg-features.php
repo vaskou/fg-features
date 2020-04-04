@@ -16,5 +16,6 @@ class FG_Features {
 
 	public function init() {
 		FG_Features_Post_Type::getInstance()->init();
+		FG_Features_CMB2_Field_Dropdown::get_instance();
 	}
 }

@@ -115,4 +115,21 @@ class FG_Features_Post_Type {
 
 		register_taxonomy( self::TAXONOMY_NAME, array( self::POST_TYPE_NAME ), $args );
 	}
+
+	public function get_items() {
+		return $this->_get_items();
+	}
+
+	private function _get_items() {
+
+		$args = array(
+			'post_type'      => self::POST_TYPE_NAME,
+			'post_status'    => 'publish',
+			'posts_per_page' => - 1,
+		);
+
+		$query = new WP_Query( $args );
+
+		return $query->get_posts();
+	}
 }

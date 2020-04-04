@@ -26,5 +26,7 @@ include 'includes/class-fg-features-post-type.php';
 
 include 'includes/features-post-type-fields/abstract-class-fg-features-post-type-fields.php';
 
+include 'includes/cmb2-custom-fields/class-fg-features-cmb2-field-dropdown.php';
+
 FG_Features::getInstance()->init();
 
