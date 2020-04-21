@@ -20,8 +20,8 @@ define( 'FG_FEATURES_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'FG_FEATURES_PLUGIN_DIR_NAME', basename( FG_FEATURES_PLUGIN_DIR_PATH ) );
 define( 'FG_FEATURES_PLUGIN_URL', plugins_url( FG_FEATURES_PLUGIN_DIR_NAME ) );
 
-include 'vendor/autoload.php';
 include 'includes/class-fg-features.php';
+include 'includes/class-fg-features-dependencies.php';
 include 'includes/class-fg-features-post-type.php';
 
 include 'includes/features-post-type-fields/abstract-class-fg-features-post-type-fields.php';
