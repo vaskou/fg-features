@@ -25,6 +25,7 @@ class FG_Features_Post_Type {
 		add_action( 'init', array( $this, 'register_post_type' ) );
 //		add_action( 'init', array( $this, 'register_taxonomy' ) );
 //		add_action( 'cmb2_admin_init', array( $this, 'add_metaboxes' ) );
+		add_action( 'pre_get_posts', array( $this, 'custom_query' ) );
 	}
 
 	public function register_post_type() {
@@ -69,7 +70,7 @@ class FG_Features_Post_Type {
 			'label'         => __( 'FG Feature', 'fg-features' ),
 			'description'   => __( 'FG Feature Description', 'fg-features' ),
 			'labels'        => $labels,
-			'supports'      => array( 'title', 'editor', 'thumbnail' ),
+			'supports'      => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 			'taxonomies'    => array( self::TAXONOMY_NAME ),
 			'hierarchical'  => false,
 			'public'        => true,
@@ -80,6 +81,7 @@ class FG_Features_Post_Type {
 			'rewrite'       => $rewrite,
 			'map_meta_cap'  => true,
 			'show_in_rest'  => false,
+			'has_archive'   => true,
 		);
 		register_post_type( self::POST_TYPE_NAME, $args );
 	}
@@ -114,6 +116,19 @@ class FG_Features_Post_Type {
 		);
 
 		register_taxonomy( self::TAXONOMY_NAME, array( self::POST_TYPE_NAME ), $args );
+	}
+
+	/**
+	 * @param $query WP_Query
+	 */
+	public function custom_query( $query ) {
+		if ( $query->is_main_query() && ! is_admin() ) {
+			if ( self::POST_TYPE_NAME == $query->get( 'post_type' ) ) {
+				$query->set( 'orderby', 'menu_order title' );
+				$query->set( 'order', 'ASC' );
+				$query->set( 'suppress_filters', 'true' );
+			}
+		}
 	}
 
 	public function get_items() {
