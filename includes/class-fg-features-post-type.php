@@ -81,7 +81,7 @@ class FG_Features_Post_Type {
 			'rewrite'       => $rewrite,
 			'map_meta_cap'  => true,
 			'show_in_rest'  => false,
-			'has_archive'   => true,
+//			'has_archive'   => true,
 		);
 		register_post_type( self::POST_TYPE_NAME, $args );
 	}
@@ -122,7 +122,8 @@ class FG_Features_Post_Type {
 	 * @param $query WP_Query
 	 */
 	public function custom_query( $query ) {
-		if ( $query->is_main_query() && ! is_admin() ) {
+		$is_shortcode = $query->get( 'is_shortcode' );
+		if ( ! is_admin() && ( $query->is_main_query() || $is_shortcode ) ) {
 			if ( self::POST_TYPE_NAME == $query->get( 'post_type' ) ) {
 				$query->set( 'orderby', 'menu_order title' );
 				$query->set( 'order', 'ASC' );
@@ -131,19 +132,45 @@ class FG_Features_Post_Type {
 		}
 	}
 
+	/**
+	 * @param $atts array
+	 *
+	 * @return WP_Query
+	 */
+	public function get_query( $atts = array() ) {
+		return $this->_get_query( $atts );
+	}
+
+	/**
+	 * @return int[]|WP_Post[]
+	 */
 	public function get_items() {
 		return $this->_get_items();
 	}
 
-	private function _get_items() {
 
-		$args = array(
+	/**
+	 * @param $atts array
+	 *
+	 * @return WP_Query
+	 */
+	private function _get_query( $atts = array() ) {
+		$default = array(
 			'post_type'      => self::POST_TYPE_NAME,
 			'post_status'    => 'publish',
 			'posts_per_page' => - 1,
 		);
 
-		$query = new WP_Query( $args );
+		$args = wp_parse_args( $atts, $default );
+
+		return new WP_Query( $args );
+	}
+
+	/**
+	 * @return int[]|WP_Post[]
+	 */
+	private function _get_items() {
+		$query = $this->_get_query();
 
 		return $query->get_posts();
 	}

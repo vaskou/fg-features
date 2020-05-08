@@ -23,6 +23,7 @@ define( 'FG_FEATURES_PLUGIN_URL', plugins_url( FG_FEATURES_PLUGIN_DIR_NAME ) );
 include 'includes/class-fg-features.php';
 include 'includes/class-fg-features-dependencies.php';
 include 'includes/class-fg-features-post-type.php';
+include 'includes/class-fg-features-shortcodes.php';
 
 include 'includes/features-post-type-fields/abstract-class-fg-features-post-type-fields.php';
 
