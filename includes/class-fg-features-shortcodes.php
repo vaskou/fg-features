@@ -28,9 +28,12 @@ class FG_Features_Shortcodes {
 
 		$default = array(
 			'is_shortcode' => true,
+			'post__in'     => '',
 		);
 
 		$args = shortcode_atts( $default, $atts );
+
+		$args['post__in'] = ! empty( $args['post__in'] ) ? explode( ',', $args['post__in'] ) : array();
 
 		$query = FG_Features_Post_Type::getInstance()->get_query( $args );
 
