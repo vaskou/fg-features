@@ -123,11 +123,17 @@ class FG_Features_Post_Type {
 	 */
 	public function custom_query( $query ) {
 		$is_shortcode = $query->get( 'is_shortcode' );
+		$is_post_in   = $query->get( 'post__in' );
+
 		if ( ! is_admin() && ( $query->is_main_query() || $is_shortcode ) ) {
 			if ( self::POST_TYPE_NAME == $query->get( 'post_type' ) ) {
 				$query->set( 'orderby', 'menu_order title' );
 				$query->set( 'order', 'ASC' );
 				$query->set( 'suppress_filters', 'true' );
+
+				if ( ! empty( $is_post_in ) ) {
+					$query->set( 'orderby', 'post__in' );
+				}
 			}
 		}
 	}
