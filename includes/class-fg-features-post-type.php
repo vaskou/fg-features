@@ -11,21 +11,18 @@ class FG_Features_Post_Type {
 	private static $instance = null;
 
 	private function __construct() {
+		add_action( 'init', array( $this, 'register_post_type' ) );
+//		add_action( 'init', array( $this, 'register_taxonomy' ) );
+//		add_action( 'cmb2_admin_init', array( $this, 'add_metaboxes' ) );
+		add_action( 'pre_get_posts', array( $this, 'custom_query' ) );
 	}
 
-	public static function getInstance() {
+	public static function instance() {
 		if ( self::$instance == null ) {
 			self::$instance = new self();
 		}
 
 		return self::$instance;
-	}
-
-	public function init() {
-		add_action( 'init', array( $this, 'register_post_type' ) );
-//		add_action( 'init', array( $this, 'register_taxonomy' ) );
-//		add_action( 'cmb2_admin_init', array( $this, 'add_metaboxes' ) );
-		add_action( 'pre_get_posts', array( $this, 'custom_query' ) );
 	}
 
 	public function register_post_type() {
