@@ -1,0 +1,196 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FremeditiGuitars - Features\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-09 17:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.0; wp-5.6.1\n"
+"X-Domain: fg-features"
+
+#: includes/class-fg-features-post-type.php:39
+msgid "Add New"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:38
+msgid "Add New FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:97
+msgid "Add New FG Feature Category"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:92
+msgid "All FG Feature Categories"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:37
+msgid "All FG Features"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:41
+msgid "Edit FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:95
+msgid "Edit FG Feature Category"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:48
+msgid "Featured Image"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:67
+msgid "FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:34
+msgid "FG Feature Archives"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:35
+msgid "FG Feature Attributes"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:89
+#: includes/class-fg-features-post-type.php:99
+msgid "FG Feature Categories"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:90
+msgid "FG Feature Category"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:68
+msgid "FG Feature Description"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:31
+msgctxt "FG Feature Singular Name"
+msgid "FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:32
+#: includes/class-fg-features-post-type.php:33
+msgid "FG Features"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:30
+msgctxt "FG Features General Name"
+msgid "FG Features"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:54
+msgid "FG Features list"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:55
+msgid "FG Features list navigation"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:56
+msgid "Filter FG Features list"
+msgstr ""
+
+#. Name of the plugin
+msgid "FremeditiGuitars - Features"
+msgstr ""
+
+#. Description of the plugin
+msgid "FremeditiGuitars - Features Post Type"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:52
+msgid "Insert into FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:40
+msgid "New FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:98
+msgid "New FG Feature Category Name"
+msgstr ""
+
+#: includes/cmb2-custom-fields/class-fg-features-cmb2-field-dropdown.php:37
+msgid "None"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:46
+msgid "Not found"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:47
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:93
+msgid "Parent FG Feature Category"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:94
+msgid "Parent FG Feature Category:"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:36
+msgid "Parent FG Feature:"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:50
+msgid "Remove Featured Image"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:45
+msgid "Search FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:91
+msgid "Search FG Feature Categories"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:49
+msgid "Set Featured Image"
+msgstr ""
+
+#: includes/class-fg-features-dependencies.php:48
+#, php-format
+msgid ""
+"The FremeditiGuitars - Features plugin requires <a href=\"%s\">CMB2</a> to "
+"be installed and active."
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:42
+msgid "Update FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:96
+msgid "Update FG Feature Category"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:53
+msgid "Uploaded to this FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:51
+msgid "Use as Featured Image"
+msgstr ""
+
+#. Author of the plugin
+msgid "Vasilis Koutsopoulos"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:43
+msgid "View FG Feature"
+msgstr ""
+
+#: includes/class-fg-features-post-type.php:44
+msgid "View FG Features"
+msgstr ""
